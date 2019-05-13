@@ -1,0 +1,71 @@
+﻿@charset "UTF-8";
+
+body {
+  padding:0; 
+  margin:0; 
+  border:0;
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+section {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex; 
+  position:relative;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  min-height:100vh;  
+}
+section > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex; 
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-direction: column;
+      flex-direction: column; 
+  -webkit-box-pack: center; 
+      -ms-flex-pack: center; 
+          justify-content: center;
+  -ms-flex-item-align:center;
+      align-self:center;
+}
+
+/* IF JAVASCRIPT NOT ACTIVATED, PUR CSS SCROLLPAGE */
+
+.scrollsnap {
+  -webkit-overflow-scrolling: touch;
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+  -webkit-scroll-snap-destination: 100vh 0;
+      -ms-scroll-snap-destination: 100vh 0;
+          scroll-snap-destination: 100vh 0;
+  -webkit-scroll-snap-points-y: repeat(100vh);
+      -ms-scroll-snap-points-y: repeat(100vh);
+          scroll-snap-points-y: repeat(100vh);
+}
+
+/* STYLES FOR EACH PAGE */
+
+section:nth-of-type(1){
+  background:#f00;
+}
+section:nth-of-type(2){
+  background:#0f0;
+}
+
+section:nth-of-type(3){
+  background:#00f;
+}
+section:nth-of-type(4){
+  background:#ff0;
+}
