@@ -1,8 +1,8 @@
 This pure JavaScript script allows you to perform some action to scroll you website vertically page by page :
-- Swipe on touchscreens
 - Scroll wheel with mouse
 - Up and down keys on keyboard
 - Hyperlinks clicks
+- Swipe on touchscreens (may be out of date)
 
 If JavaScript is desactivated, page by page scroll stills works with **scroll-snap** CSS properties.
 
@@ -16,7 +16,8 @@ If JavaScript is desactivated, page by page scroll stills works with **scroll-sn
   </div>
 </section>
 ```
-Number in ```<section id="page1">``` must be incremented by one as long as you add pages below.
+Number in ```<section id="page1">``` must be incremented by 1 as long as you add pages below.
+
 This way, links to inner pages will still work if JavaScript is desactivated.
 
 ### If you want a link that scrolls nicely to another of your inner page, give it a "links" class ###
