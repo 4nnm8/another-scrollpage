@@ -4,7 +4,9 @@ This pure JavaScript script allows you to perform some action to scroll you webs
 - Up and down keys on keyboard
 - Hyperlinks clicks
 
-If JavaScript is desactivated, page by page scroll stills works with **scroll-snap** CSS properties. 
+If JavaScript is desactivated, page by page scroll stills works with **scroll-snap** CSS properties.
+
+/!\ Only for Chrome > 69, Firefox > 68, IE > 11*, Edge > 75, Safari > 11 /!\
 
 ### You can add as many pages as you want as long as they keep this structure ###
 ```
@@ -22,7 +24,7 @@ This way, links to inner pages will still work if JavaScript is desactivated.
 <a href="#page1" class="links">Go to page 1</a>
 ```
 
-### If you want an element to be scrollable inside the scroll page, give it a "scrollable" class ###
+### If you want an element to be scrollable inside the scroll page, add it a "scrollable" class ###
 ```
 <div class="lorem scrollable">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan at augue in euismod.<br/>
