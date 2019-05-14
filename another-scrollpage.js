@@ -37,9 +37,44 @@ var $ = function(a) {
   touchEndY = 0,
   touchEndX = 0,
   touchSensitivity = 5,
-  scrollspeed = 1000, // SCROLL SPEED
-  scrollable;
+  scrollable,
+  scrollspeed = 1000; // SCROLL SPEED in milliseconds
 
+// EVENTS BEFORE ARRIVING PAGE N°*
+function callbefore(n) {
+  switch (n) {
+    case 1:
+      console.log('Heading page 1');
+      break;
+    case 2:
+      console.log('Heading page 2');
+      break;
+    case 3:
+      console.log('Heading page 3');
+      break;
+    case 4:
+      console.log('Heading page 4');
+      break;
+  }
+}
+
+// EVENTS WHEN ARRIVED PAGE N°*
+function callback(n) {
+  switch (n) {
+    case 1:
+      console.log('Arrived page 1');
+      break;
+    case 2:
+      console.log('Arrived page 2');
+      break;
+    case 3:
+      console.log('Arrived page 3');
+      break;
+    case 4:
+      alert('Welcome on page 4 !');
+      break;
+  }
+}
 function locate() {
   var a = docu.scrollTop,
     b = [];
@@ -61,7 +96,7 @@ function wheelto(event) {
   wait = false;
 
   var a = window.event || event || event.originalEvent,
-    b = Math.max(-1, Math.min(1, -a.wheelDelta || a.detail));
+      b = Math.max(-1, Math.min(1, -a.wheelDelta || a.detail));
 
   if (dowescroll && dowescroll.offsetHeight < dowescroll.scrollHeight) {
 
@@ -115,40 +150,6 @@ function swipeStart(event) {
   touchStartX = touchEvents.x;
 }
 
-function callbefore(n) {
-  switch (n + 1) {
-    case 1:
-      console.log('Heading page 1');
-      break;
-    case 2:
-      console.log('Heading page 2');
-      break;
-    case 3:
-      console.log('Heading page 3');
-      break;
-    case 4:
-      console.log('Heading page 4');
-      break;
-  }
-}
-
-function callback(n) {
-  switch (n + 1) {
-    case 1:
-      console.log('Arrived page 1');
-      break;
-    case 2:
-      console.log('Arrived page 2');
-      break;
-    case 3:
-      console.log('Arrived page 3');
-      break;
-    case 4:
-      alert('Welcome on page 4 !');
-      break;
-  }
-}
-
 function go(dir) {
   if (wait === true || dir == "down" && page == sect.length - 1 || dir == "up" && page === 0) return false;
   wait = true;
@@ -166,7 +167,7 @@ function go(dir) {
       a = page + 1;
     }
   }
-  callbefore(a);
+  callbefore(a+1);
   var start = docu.scrollTop,
     yposi = sect[a].getBoundingClientRect().top + start,
     change = yposi - start,
@@ -179,7 +180,7 @@ function go(dir) {
       } else {
         wait = false,
           page = a;
-        callback(a);
+        callback(a+1);
       }
     };
   scrollIt();
