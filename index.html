@@ -8,28 +8,40 @@
     <link rel="stylesheet" href="another-scrollpage.css" type="text/css" media="screen" />
   </head>
   <body class="scrollsnap">
-    <section><a name="1"></a>
+    <section id="page1">
       <div>
         <!-- Content of page goes here -->
-		PAGE 1 
+		<p>Use your mouse whell, up and down keyboard keys or swipe on touch screen to go to the next page !</p>
+		<!-- Content of page goes here -->
 	  </div>
     </section>
-    <section><a name="2"></a>
+    <section id="page2">
       <div>
 	    <!-- Content of page goes here -->
-        PAGE 2
+        <p>Go back to page 3 with this link that has a "link" class</p>
+		<p><a href="#page3" class="link">Go to page 3</a></p>
+		<!-- Content of page goes here -->
 	  </div>
     </section>
-    <section><a name="3"></a>
+    <section id="page3">
       <div>
         <!-- Content of page goes here -->
-		PAGE 3
+		<p>This DIV has a "scrollable" class, allowing it to be scrolled independently.</p>
+		<div class="scrollable">
+		  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan at augue in euismod. Suspendisse hendrerit quis tortor vel tincidunt. Proin dignissim, massa in pharetra euismod, dui nisl mollis lectus, vel molestie nisl elit ac libero. Vivamus ut sapien consequat, tincidunt nisl eu, tempus nunc. Nullam aliquet vel arcu mattis aliquam. Nunc ullamcorper euismod urna id ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras sit amet est at velit pharetra volutpat. Sed ante tortor, fringilla sed enim a, convallis viverra metus. Ut semper eleifend malesuada. Integer placerat enim in ex tempus, non viverra risus gravida. Nam pretium eu diam vel vestibulum.<br/>
+          Suspendisse ultrices dolor nec interdum congue. Maecenas dolor lacus, porta at maximus in, vestibulum nec dolor. Integer fermentum sollicitudin volutpat. Nunc ut ultricies nisi, sed euismod justo. Sed nunc eros, luctus ac nisl id, posuere aliquam nunc. Nullam laoreet malesuada ante eget ornare. Quisque sed tincidunt dui, nec interdum elit. Integer cursus consectetur augue non condimentum. Aliquam eu tortor elit. Maecenas hendrerit, erat ac imperdiet malesuada, tortor dolor aliquam ante, eget auctor ante dui eu sapien. Phasellus ipsum leo, scelerisque quis molestie at, imperdiet et lorem. Donec id suscipit purus, eget commodo nulla. Duis eu sagittis metus, vitae lobortis metus. Sed et risus pharetra ex accumsan euismod. Sed lacinia eleifend mauris, a hendrerit ex sollicitudin sed.<br/>
+          Nam dolor dui, interdum vitae malesuada pellentesque, convallis eget ligula. Ut molestie, risus malesuada hendrerit tempor, neque nunc maximus nulla, facilisis vehicula dui tortor sed tellus. Duis ut enim vehicula, ultrices urna a, molestie nisi. Nullam non libero feugiat, feugiat turpis lacinia, rhoncus elit. Donec vehicula tortor faucibus dolor tristique, vel viverra purus pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse eu facilisis justo, ut consectetur nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur libero dolor, volutpat vitae finibus sed, lacinia vitae quam.<br/>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec consequat mauris vel aliquam lobortis. Maecenas dapibus nulla nec lectus sollicitudin, at fringilla felis porta. Phasellus sit amet nisl egestas, finibus nisi at, facilisis nulla. Suspendisse eu dolor consequat, iaculis dolor vel, maximus nisi. Cras viverra porta enim, sit amet viverra est. Donec vel nibh sollicitudin, aliquam lectus ut, pellentesque odio.<br/>
+          Donec eget eleifend risus. Nam tincidunt congue ullamcorper. Sed a neque a dui suscipit ultricies non ac massa. Ut tellus orci, ultrices vel placerat quis, sagittis eget ex. Mauris ut lorem ultrices, luctus leo eu, ornare sapien. Nulla iaculis molestie molestie. Aliquam congue ac orci sed ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi purus neque, laoreet eget ante ut, lacinia placerat quam. Sed vulputate nunc suscipit venenatis ullamcorper. Curabitur volutpat condimentum turpis, vel vehicula erat consectetur id. Proin sit amet pharetra dolor, eu condimentum ante.
+		</div>
+		<!-- Content of page goes here -->
 	  </div>
     </section>
-    <section><a name="4"></a>
+    <section id="page4">
       <div>
 	  <!-- Content of page goes here -->
-      PAGE 4
+      I can add some callback events when arriving or leaving a page!
+	  <!-- Content of page goes here -->
 	  </div>
     </section>
     <script type="text/javascript" src="another-scrollpage.js"></script>
