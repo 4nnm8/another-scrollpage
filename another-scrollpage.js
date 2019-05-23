@@ -1,4 +1,4 @@
-var $ = function(a) {
+var targ = function(a) {
     var b = [];
 
     function Reach(elements) {
@@ -11,7 +11,7 @@ var $ = function(a) {
         b.push(elements);
       }
     }
-    Reach.prototype.on = function(evt, fn) {
+    Reach.prototype.listen = function(evt, fn) {
       for (var i = 0; i < b.length; i++) {
         if (b[i].addEventListener) {
           b[i].addEventListener(evt, fn, false);
@@ -186,7 +186,7 @@ function go(dir) {
   scrollIt();
 }
 
-$('.link').on('click', function(event) {
+targ('.link').listen('click', function(event) {
   event.preventDefault();
   var nb = Number(this.getAttribute('href').replace('#page', '')) - 1;
   wait = false;
@@ -194,7 +194,7 @@ $('.link').on('click', function(event) {
 });
 
 var w8;
-$(window).on('resize', function() {
+targ(window).listen('resize', function() {
   clearTimeout(w8);
   w8 = setTimeout(function() {
     wait = false;
@@ -202,7 +202,7 @@ $(window).on('resize', function() {
   }, 500);
 });
 
-$(document).on("DOMContentLoaded", function() {
+targ(document).listen("DOMContentLoaded", function() {
   document.body.style.overflow = 'hidden';
   document.body.classList.remove("scrollsnap");
   scrollable = document.getElementsByClassName("scrollable");
@@ -210,17 +210,17 @@ $(document).on("DOMContentLoaded", function() {
   if (scrollable.length > 0) {
     for (var j = 0; j < g; j++) {
       let k = scrollable[j];
-      $(k).on('mouseover', function() {
+      targ(k).listen('mouseover', function() {
         dowescroll = this;
       });
-      $(k).on('mouseout', function() {
+      targ(k).listen('mouseout', function() {
         dowescroll = false;
       });
     }
   }
 });
 
-$(docu).on('keydown', function(e) {
+targ(docu).listen('keydown', function(e) {
   switch (e.which || e.keyCode || e.charCode) {
     case 38:
       go('up');
@@ -230,7 +230,7 @@ $(docu).on('keydown', function(e) {
   }
 });
 
-$(docu).on('mousewheel', wheelto);
-$(docu).on('DOMMouseScroll', wheelto);
-$(docu).on('touchstart', swipeStart);
-$(docu).on('touchmove', swipeMove);
+targ(docu).listen('mousewheel', wheelto);
+targ(docu).listen('DOMMouseScroll', wheelto);
+targ(docu).listen('touchstart', swipeStart);
+targ(docu).listen('touchmove', swipeMove);
