@@ -52,6 +52,7 @@ section > div {
   -webkit-scroll-snap-points-y: repeat(100vh);
       -ms-scroll-snap-points-y: repeat(100vh);
           scroll-snap-points-y: repeat(100vh);
+  scroll-behavior: smooth;
 }
 
 /* STYLES FOR EACH PAGE */
