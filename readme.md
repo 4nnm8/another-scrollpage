@@ -1,3 +1,6 @@
+Accessibility features incoming !
+
+
 This pure JavaScript script allows you to perform some action to scroll you website vertically page by page :
 - Scroll wheel with mouse
 - Up and down keys on keyboard
