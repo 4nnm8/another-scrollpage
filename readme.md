@@ -5,7 +5,7 @@ This pure JavaScript script allows you to perform some action to scroll you webs
 - Scroll wheel with mouse
 - Up and down keys on keyboard
 - Hyperlinks clicks
-- Swipe on touchscreens (may be out of date)
+- Swipe on touchscreens
 
 If JavaScript is desactivated, page by page scroll stills works with **scroll-snap** CSS properties.
 
